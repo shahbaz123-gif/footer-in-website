@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        photo gallery
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: #00ff15;
+        }
+
+        .navbar {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #030303;
+            color: white;
+            padding: 20px;
+            min-height: calc(100vh - 100px);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: tranform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">Photo gallery</div>
+    <div class="container">
+        <div class="sidbar" id="mysidebar" style="display: none;">
+        <button class="sidebar" onclick="f1_close()">
+              abc
+        </button>
+        <a>
+    link 1
+        </a>
+        <a>link 2</a>
+        </div>
+        <div class="main-content">
+            <div class="gallery">
+                <img src="https://c4.wallpaperflare.com/wallpaper/362/276/920/nature-4k-pc-full-hd-wallpaper-preview.jpg"
+                    alt="photo 1">
+                <img src="https://i.ytimg.com/vi/NNS5Piu-EII/maxresdefault.jpg" alt="photo 2">
+                <img src="https://i.ytimg.com/vi/OOu-xloMDlY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCxnmvfJCNw1Zi076ZFVGylunbN0A"
+                    alt="photo 3">
+                <img src="https://wallpapersok.com/images/high/4k-nature-at-golden-hour-5281oz5sljar0zfm.jpg"
+                    alt="photo 4">
+                <img src="https://i.ytimg.com/vi/U-MPyvz9RhE/maxresdefault.jpg" alt="photo 5">
+                <img src="https://i.ytimg.com/vi/SYyvx6GE2UI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA2GHeLBz_TGWqi0S5_XLJt4_BFlQ"
+                    alt="photo 6">
+            </div>
+        </div>
+    </div>
+ <div class="footer">
+    <p>
+        @copy all rights and reserved by shahbaz
+    </p>
+    <a href="https://www.codingal.com/" target="_blank">
+        visit codingal website.
+    </a>
+ </div>
+ <div class="cat">
+    <button class="btn" onclick="f1_open">
+        <i class="fa fa-bars"></i>
+    </button>
+ </div> 
+ <script>
+    function f1_open(){document.getElementById("mysidebar").style.display="block"}
+    function f1_close() {document.getElementById("mysidebar").style.display = "none"}
+ </script>  
+</body>
+
+</html>
